@@ -1,4 +1,4 @@
-import { App } from './components/app/app';
+import init from './grid/pkg';
 
 import './global.css';
 
@@ -11,7 +11,15 @@ export default () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <App />
+        <button
+          onClick$={() => {
+            init().then((module) => {
+              module.greet();
+            });
+          }}
+        >
+          Greet
+        </button>
       </body>
     </html>
   );
