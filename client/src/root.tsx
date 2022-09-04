@@ -1,6 +1,5 @@
-import init from './grid/pkg';
-
 import './global.css';
+import { Grid } from './components/grid/grid.component';
 
 export default () => {
   return (
@@ -11,15 +10,7 @@ export default () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
-        <button
-          onClick$={() => {
-            init().then((module) => {
-              module.greet();
-            });
-          }}
-        >
-          Greet
-        </button>
+        <Grid />
       </body>
     </html>
   );
